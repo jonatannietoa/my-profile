@@ -72,7 +72,7 @@ Most recently I designed and built a multi-agent "development orchestrator": a t
 What I care about as an engineer: shipping vertical slices, Tidy First (structure separate from behaviour), honest tests that are never silenced, end-to-end observability (every agent run traced and labelled), and treating AI as serious, cost-aware, safe engineering — not as a demo.`,
 
   terminalLines: [
-    'const jonatan = await hire("Engineering Manager")',
+    'const jonatan = await hire("Engineering Manager / Senior Software Engineer")',
     'jonatan.builds(["multi-agent AI", "full-stack products"])',
     "jonatan.stack // NestJS · Next.js · Vite · LangGraph · Rust(experimentation)",
     'jonatan.principle // "human in the loop for every merge"',
