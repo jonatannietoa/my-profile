@@ -167,13 +167,59 @@
     text-decoration: none !important;
   }
 
-  /* keep individual cards from splitting across pages,
-     but let sections flow so pages fill top-to-bottom */
-  article {
+  /* ── Page-break control ─────────────────────────────────────
+     Goal: never cut through the middle of a block of text. */
+
+  /* Keep a heading glued to the content that follows it (no
+     section/company/role title stranded at the bottom of a page). */
+  h1,
+  h2,
+  h3,
+  h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Don't split a single bullet line across two pages. */
+  li {
     break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* When a paragraph must break, keep at least 3 lines on each page
+     instead of leaving one orphaned line. */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Keep every card intact (stats, skills, sidebar, experience). */
+  [data-print='flat'] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Experience cards can hold several roles and may be taller than a
+     page — allow the card itself to break, but only cleanly between
+     whole role blocks, never mid-sentence. */
+  article[data-print='flat'] {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+  article > div {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* The About summary is long free-flowing text; let it span pages
+     (orphans/widows above keep the breaks tidy). */
+  #about [data-print='flat'] {
+    break-inside: auto;
+    page-break-inside: auto;
   }
 
   .print-break-before {
     break-before: page;
+    page-break-before: always;
   }
 }
