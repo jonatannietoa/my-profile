@@ -65,7 +65,7 @@ export const profile: Profile = {
     "Engineering Manager · Senior Software Engineer · Human-Driven AI Agents",
   location: "Barcelona, Catalonia, Spain",
 
-  summary: `Agentic Senior Software Engineer with 10+ years building and leading software across the full stack — and, increasingly, building the AI systems that build software. I grew up as a backend-heavy product engineer (NestJS, Spring Boot, Node/TypeScript, Java, Rust) and today I spend much of my time designing multi-agent AI workflows: orchestration systems where specialized LLM agents plan, write code, run tests, and open pull requests across several repositories — always with a human in the loop for every merge.
+  summary: `Agentic Senior Software Engineer with 10+ years building and leading software across the full stack — and, increasingly, building the AI systems that build software. I grew up as a backend-heavy product engineer (NestJS, Spring Boot with Java and Kotlin, Node/TypeScript, Rust) and today I spend much of my time designing multi-agent AI workflows: orchestration systems where specialized LLM agents plan, write code, run tests, and open pull requests across several repositories — always with a human in the loop for every merge.
 
 Most recently I designed and built a multi-agent "development orchestrator": a team-lead agent decomposes a ticket, routes the work to per-layer coding agents (backend, frontend, mobile, infra), runs each one's test/lint gate, and ships reviewed, ready-to-merge PRs. I ported it onto LangGraph + LangSmith running on Anthropic's Claude models, with a model-by-role split (a stronger model for reasoning, a faster one for the token-heavy coding loop) and prompt caching that cut token cost by an order of magnitude while keeping output quality high.
 
@@ -128,8 +128,8 @@ What I care about as an engineer: shipping vertical slices, Tidy First (structur
       items: [
         "TypeScript / Node.js",
         "NestJS",
-        "Java",
-        "Spring Boot",
+        "Java & Kotlin",
+        "Spring Boot (Java / Kotlin)",
         "PostgreSQL & MongoDB",
         "Rust (experimentation)",
       ],
