@@ -57,25 +57,29 @@ export interface Profile {
   publications: { title: string; url?: string }[];
   /** highlighted numbers for the "at a glance" strip */
   stats: { value: string; label: string }[];
+  /** what I'm after in the next role, rendered under About */
+  lookingFor: { title: string; items: string[] };
 }
 
 export const profile: Profile = {
   name: "Jonatan Nieto Agis",
   headline:
-    "Engineering Manager · Senior Software Engineer · Human-Driven AI Agents",
+    "Engineering Manager · Senior Software Engineer · Pragmatic AI Systems",
   location: "Barcelona, Catalonia, Spain",
 
-  summary: `Agentic Senior Software Engineer with 10+ years building and leading software across the full stack — and, increasingly, building the AI systems that build software. I grew up as a backend-heavy product engineer (NestJS, Spring Boot with Java and Kotlin, Node/TypeScript, Rust) and today I spend much of my time designing multi-agent AI workflows: orchestration systems where specialized LLM agents plan, write code, run tests, and open pull requests across several repositories — always with a human in the loop for every merge.
+  summary: `Hands-on senior engineer, 10+ years across the full stack. Pragmatism first: I pick the smallest thing that solves the problem and can still be maintained by whoever inherits it — vertical slices, boring tech where boring works, structure kept separate from behaviour, tests that are never silenced. Backend is home (NestJS, Spring Boot with Java and Kotlin, Node/TypeScript, Python), and for the last couple of years I've been pointing that same discipline at AI systems.
 
-Most recently I designed and built a multi-agent "development orchestrator": a team-lead agent decomposes a ticket, routes the work to per-layer coding agents (backend, frontend, mobile, infra), runs each one's test/lint gate, and ships reviewed, ready-to-merge PRs. I ported it onto LangGraph + LangSmith running on Anthropic's Claude models, with a model-by-role split (a stronger model for reasoning, a faster one for the token-heavy coding loop) and prompt caching that cut token cost by an order of magnitude while keeping output quality high.
+Concretely, what I build with agents: a multi-agent development orchestrator on LangGraph + LangSmith — a team-lead agent scopes a ticket, one coding agent per repo writes code and tests, a PR only opens if that repo's gate is green, and a human merges every single time. Internal assistants built on RAG — semantic search over company documentation, natural language to SQL against the warehouse — delivered where people already work, in Slack and Teams. Ingestion pipelines where the LLM answers the one question it is actually good at and deterministic rules make the decision. And tools and plugins for agent harnesses (LangChain/LangGraph, DeepSeek Harness), with the domain in configuration and the agent loop kept generic.
 
-What I care about as an engineer: shipping vertical slices, Tidy First (structure separate from behaviour), honest tests that are never silenced, end-to-end observability (every agent run traced and labelled), and treating AI as serious, cost-aware, safe engineering — not as a demo.`,
+The opinion underneath all of it: agents are software. Clean boundaries, ports and adapters, one responsibility per node, prompts versioned like code, cost and latency as first-class metrics, every run traced. A prompt is not a substitute for a design. Most of what makes an agent trustworthy is ordinary engineering — the model is a component, not the architecture.
+
+Where I'm still growing: my agent work has been internal — orchestration, developer workflow, BI, back-office — solving my own company's problems, with colleagues as the users. I haven't yet owned an AI capability that ships in the product to end customers, and that is precisely the next step I'm looking for.`,
 
   terminalLines: [
     'const jonatan = await hire("Engineering Manager || Senior Software Engineer")',
-    'jonatan.builds(["multi-agent AI", "full-stack products"])',
-    "jonatan.stack // NestJS · Next.js · Vite · LangGraph · Rust(experimentation)",
-    'jonatan.principle // "human in the loop for every merge"',
+    'jonatan.principle // "pragmatism first — smallest thing that solves it"',
+    'jonatan.builds(["agents on LangGraph", "RAG assistants", "full-stack products"])',
+    'jonatan.rule // "the model is a component, not the architecture"',
   ],
 
   contacts: [
@@ -115,12 +119,15 @@ What I care about as an engineer: shipping vertical slices, Tidy First (structur
     {
       label: "AI / Agents",
       items: [
-        "LangGraph",
-        "LangSmith",
+        "LangGraph / LangChain",
+        "LangSmith (tracing & evals)",
         "Anthropic / Claude API",
+        "RAG (pgvector, ChromaDB)",
+        "NL → SQL over the warehouse",
+        "Agent tools & plugins (MCP, DeepSeek Harness)",
         "ReAct Agents",
         "Multi-Agent Orchestration",
-        "Prompt Caching",
+        "Prompt caching & cost control",
       ],
     },
     {
@@ -158,6 +165,7 @@ What I care about as an engineer: shipping vertical slices, Tidy First (structur
         "CQRS",
         "DDD",
         "Event Sourcing",
+        "Human-in-the-loop by design",
       ],
     },
   ],
@@ -405,6 +413,16 @@ What I care about as an engineer: shipping vertical slices, Tidy First (structur
     { value: "10+", label: "Years building software" },
     { value: "3×", label: "CTO / Eng. leadership roles" },
     { value: "10×", label: "Token cost cut on AI pipeline" },
-    { value: "∞", label: "Humans in the loop" },
+    { value: "0", label: "Agent PRs merged without a human" },
   ],
+
+  lookingFor: {
+    title: "What I'm looking for",
+    items: [
+      "Pragmatic teams — small slices, real feedback, no ceremony for its own sake.",
+      "Products where AI is part of what the customer buys, not a side experiment.",
+      "Owning an AI capability end to end: evals, cost, latency, failure modes, the unglamorous parts.",
+      "Room to keep the architecture clean while the field keeps moving underneath it.",
+    ],
+  },
 };

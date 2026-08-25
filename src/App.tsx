@@ -29,6 +29,24 @@ export default function App() {
               </p>
             ))}
           </div>
+
+          <div
+            data-print="flat"
+            className="mt-4 rounded-xl border border-border bg-surface/40 p-6"
+          >
+            <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
+              <span className="font-mono text-primary">&gt;</span>
+              {profile.lookingFor.title}
+            </h3>
+            <ul className="space-y-2 leading-relaxed text-muted">
+              {profile.lookingFor.items.map((item) => (
+                <li key={item} className="flex gap-2.5">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/70" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </Section>
 
         {/* Skills */}
