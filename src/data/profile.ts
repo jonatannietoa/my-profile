@@ -63,11 +63,10 @@ export interface Profile {
 
 export const profile: Profile = {
   name: "Jonatan Nieto Agis",
-  headline:
-    "Engineering Manager · Senior Software Engineer · Pragmatic AI Systems",
+  headline: "Senior Software Engineer · Pragmatic AI Systems",
   location: "Barcelona, Catalonia, Spain",
 
-  summary: `Hands-on senior engineer, 10+ years across the full stack. Pragmatism first: I pick the smallest thing that solves the problem and can still be maintained by whoever inherits it — vertical slices, boring tech where boring works, structure kept separate from behaviour, tests that are never silenced. Backend is home (NestJS, Spring Boot with Java and Kotlin, Node/TypeScript, Python), and for the last couple of years I've been pointing that same discipline at AI systems.
+  summary: `Hands-on senior engineer, 10+ years across the full stack, these days leading a product vertical without stepping away from the code. Pragmatism first: I pick the smallest thing that solves the problem and can still be maintained by whoever inherits it — vertical slices, boring tech where boring works, structure kept separate from behaviour, tests that are never silenced. Backend is home (NestJS, Spring Boot with Java and Kotlin, Node/TypeScript, Python), and for the last couple of years I've been pointing that same discipline at AI systems.
 
 Concretely, what I build with agents: a multi-agent development orchestrator on LangGraph + LangSmith — a team-lead agent scopes a ticket, one coding agent per repo writes code and tests, a PR only opens if that repo's gate is green, and a human merges every single time. Internal assistants built on RAG — semantic search over company documentation, natural language to SQL against the warehouse — delivered where people already work, in Slack and Teams. Ingestion pipelines where the LLM answers the one question it is actually good at and deterministic rules make the decision. And tools and plugins for agent harnesses (LangChain/LangGraph, DeepSeek Harness), with the domain in configuration and the agent loop kept generic.
 
@@ -76,9 +75,10 @@ The opinion underneath all of it: agents are software. Clean boundaries, ports a
 Where I'm still growing: my agent work has been internal — orchestration, developer workflow, BI, back-office — solving my own company's problems, with colleagues as the users. I haven't yet owned an AI capability that ships in the product to end customers, and that is precisely the next step I'm looking for.`,
 
   terminalLines: [
-    'const jonatan = await hire("Engineering Manager || Senior Software Engineer")',
+    'const jonatan = await hire("Senior Software Engineer")',
     'jonatan.principle // "pragmatism first — smallest thing that solves it"',
     'jonatan.builds(["agents on LangGraph", "RAG assistants", "full-stack products"])',
+    'jonatan.leads(aVertical) // and still opens pull requests',
     'jonatan.rule // "the model is a component, not the architecture"',
   ],
 
@@ -411,7 +411,7 @@ Where I'm still growing: my agent work has been internal — orchestration, deve
 
   stats: [
     { value: "10+", label: "Years building software" },
-    { value: "3×", label: "CTO / Eng. leadership roles" },
+    { value: "3×", label: "Teams led, hands still on the code" },
     { value: "10×", label: "Token cost cut on AI pipeline" },
     { value: "0", label: "Agent PRs merged without a human" },
   ],
