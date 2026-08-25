@@ -182,7 +182,7 @@ Where I'm still growing: my agent work has been internal — orchestration, deve
       companyMeta: "8 mos",
       roles: [
         {
-          title: "Engineering Manager",
+          title: "Engineering Lead — Perks",
           period: "Mar 2026 — Present",
           duration: "5 mos",
           location: "Barcelona",
@@ -209,7 +209,7 @@ Where I'm still growing: my agent work has been internal — orchestration, deve
       companyMeta: "2 yrs 7 mos",
       roles: [
         {
-          title: "Software Engineering Captain",
+          title: "Engineering Lead",
           period: "Jun 2025 — Dec 2025",
           duration: "7 mos",
           location: "Spain",
